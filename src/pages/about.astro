@@ -1,7 +1,15 @@
 ---
 import "../styles/global.css";
+import Header from "../component/Header.astro";
 import Footer from "../component/Footer.astro";
 ---
+
+<style>
+  .content {
+    max-width: 600px;
+    margin: 5em auto;
+  }
+</style>
 
 <html lang="en">
   <head>
@@ -12,11 +20,12 @@ import Footer from "../component/Footer.astro";
     <title>Astro</title>
   </head>
   <body>
-            <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <h1>About</h1>
-    <p>This is an Astro web site project.</p>
-    <p>Currently in testing phase.</p>
+    <div class="content">
+      <Header />
+      <h1>About</h1>
+      <p>This is an Astro web site project.</p>
+      <p>Currently in testing phase.</p>
+    </div>
   </body>
 
   <Footer />

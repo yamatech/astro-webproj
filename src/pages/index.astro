@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Header from "../component/Header.astro";
 import Footer from "../component/Footer.astro";
 ---
 
@@ -22,10 +23,6 @@ import Footer from "../component/Footer.astro";
         margin: 0;
       }
 
-      .content {
-        max-width: 600px;
-      }
-
       .card {
         display: inline-block;
         width: 200px;
@@ -34,6 +31,10 @@ import Footer from "../component/Footer.astro";
         border-radius: 5px;
         padding: 10px;
         margin: 10px;
+      }
+
+      .index-content {
+        max-width: 600px;
       }
 
       .card h2 {
@@ -58,7 +59,9 @@ import Footer from "../component/Footer.astro";
     </style>
   </head>
   <body>
-    <div class="content">
+    <div class="index-content">
+      <Header />
+
       <div class="card">
         <img
           src="/images/clock_icon.png"
@@ -86,13 +89,6 @@ import Footer from "../component/Footer.astro";
           <a href="note_app/index.html">Sample</a> |
           <a href="https://github.com/yamatech/note-vue">Repository</a>
         </div>
-      </div>
-
-      <div>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <h1>Home</h1>
-        <p>Hello from Astro.</p>
       </div>
 
       <Footer />
