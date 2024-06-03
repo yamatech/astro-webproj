@@ -1,19 +1,101 @@
 ---
-
+import "../styles/global.css";
+import Footer from "../component/Footer.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<h1>Home</h1>
-		<p>Hello from Astro.</p>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+    <style>
+      body {
+        font-size: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .content {
+        max-width: 600px;
+      }
+
+      .card {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      .card h2 {
+        font-size: 1.5em;
+        margin: 0.8em 0;
+      }
+
+      .image-container {
+        width: 100px;
+        height: 100px;
+        background-color: #808080;
+        border: 1px solid gray;
+        border-radius: 20%;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+        margin: 5px;
+      }
+
+      .card-link {
+        text-align: center;
+        font-size: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="card">
+        <img
+          src="/images/clock_icon.png"
+          class="image-container"
+          alt="Clock Icon"
+          width="100"
+          height="100"
+        />
+        <h2>Clock app</h2>
+        <div class="card-link">
+          <a href="js_clock/index.html">Sample</a> |
+          <a href="https://github.com/yamatech/js_clock">Repository</a>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="/images/note_icon.png"
+          class="image-container"
+          alt="Note Icon"
+          width="100"
+          height="100"
+        />
+        <h2>Note app</h2>
+        <div class="card-link">
+          <a href="note_app/index.html">Sample</a> |
+          <a href="https://github.com/yamatech/note-vue">Repository</a>
+        </div>
+      </div>
+
+      <div>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <h1>Home</h1>
+        <p>Hello from Astro.</p>
+      </div>
+
+      <Footer />
+    </div>
+  </body>
 </html>
